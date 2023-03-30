@@ -19,10 +19,6 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => {
           style={{
             background: category.name === selectedCategory && "#FC1503",
             color: "white",
-            // border: "none",
-            // padding: 5,
-            // display: "flex",
-            // alignItems: "center",
           }}
         >
           <span

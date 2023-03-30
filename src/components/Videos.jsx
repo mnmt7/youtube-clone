@@ -6,18 +6,16 @@ const Videos = ({ videos, direction }) => {
   return (
     <Stack
       direction={direction || "row"}
-      // border="1px solid red"
       flexWrap="wrap"
-      justifyContent="center"
+      justifyContent="start"
       alignItems="start"
-      columnGap={5}
-      rowGap={3}
-      // px={10}
+      gap={2}
     >
       {videos && videos.map((item, idx) => (
         <Box key={idx}>
           {item.id.videoId && <VideoCard video={item} />}
           {item.id.channelId && <ChannelCard channelDetails={item} />}
+          {!item.id.videoId && !item.id.channelId && <VideoCard video={item} />}
         </Box>
       ))}
     </Stack>
